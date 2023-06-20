@@ -1,0 +1,769 @@
+  <html><head><title>Q1</title>
+  <link rel="stylesheet" type="text/css"
+  href="/phoenics/d_polis/polstyle.css">
+  </head><body><pre><strong>
+ TALK=T;RUN( 1, 1)
+ 
+ ************************************************************
+   Q1 created by VDI menu, Version 2022, Date 05/12/22
+ CPVNAM=VDI; SPPNAM=Core
+ ************************************************************
+  Echo DISPLAY / USE settings
+  DISPLAY
+ 
+  <a href="/phoenics/d_polis/d_applic/d_marine/toxspil/spill.htm">TRANSPORT OF A TOXIC SPILL</a>
+ 
+  An application of multicomponent chemical reaction system model
+  is presented aimed at the at the simulation of the relevant
+  physicochemical phenomena taking place in a real-life
+  environmental case study.
+ 
+ 
+  ENDDIS
+ ************************************************************
+ IRUNN = 1 ;LIBREF = 403
+ ************************************************************
+  Group 1. Run Title
+ TEXT(Transport Of Toxic Spill                )
+ ************************************************************
+  Group 2. Transience
+ STEADY=F
+    * Set overall time and no. of steps
+ RSET(U,0.,2.0E+04,40)
+    * Modify regions
+ RSET(T,1,40,1.)
+ ************************************************************
+  Groups 3, 4, 5  Grid Information
+    * Overall number of cells, RSET(M,NX,NY,NZ,tolerance)
+ RSET(M,77,30,1)
+    * Set overall domain extent:
+    *        xulast  yvlast  zwlast
+            name
+    * Set overall domain extent:
+    *        xulast  yvlast  zwlast
+            name
+ XSI= 7.155000E+03; YSI= 3.619351E+03; ZSI= 5.799900E+00
+ RSET(D,CHAM        )
+    * Set objects: x0     y0     z0
+    *              dx     dy     dz
+                   name
+ XPO= 4.646104E+02; YPO= 2.412900E+02; ZPO= 0.000000E+00
+ XSI= 1.858442E+02; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,CMP0        )
+ XPO= 7.433765E+02; YPO= 1.085805E+03; ZPO= 0.000000E+00
+ XSI= 1.579675E+03; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,CMP1        )
+ XPO= 1.951364E+03; YPO= 7.238702E+02; ZPO= 0.000000E+00
+ XSI= 1.022143E+03; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,CMP2        )
+ XPO= 3.066429E+03; YPO= 6.032253E+02; ZPO= 0.000000E+00
+ XSI= 2.230130E+03; YSI= 1.206449E+02; ZSI= 5.799900E+00
+ RSET(B,CMP3        )
+ XPO= 4.739025E+03; YPO= 1.206450E+03; ZPO= 0.000000E+00
+ XSI= 1.300910E+03; YSI= 1.206375E+02; ZSI= 5.799900E+00
+ RSET(B,CMP4        )
+ XPO= 5.761169E+03; YPO= 7.238702E+02; ZPO= 0.000000E+00
+ XSI= 1.207987E+03; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,CMP5        )
+ XPO= 0.000000E+00; YPO= 0.000000E+00; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,INLE1       )
+ XPO= 0.000000E+00; YPO= 1.206450E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,INLE2       )
+ XPO= 0.000000E+00; YPO= 2.412900E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,INLE3       )
+ XPO= 0.000000E+00; YPO= 3.619351E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206451E+02; ZSI= 5.799900E+00
+ RSET(B,INLE4       )
+ XPO= 0.000000E+00; YPO= 4.825802E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206451E+02; ZSI= 5.799900E+00
+ RSET(B,INLE5       )
+ XPO= 0.000000E+00; YPO= 6.032253E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206449E+02; ZSI= 5.799900E+00
+ RSET(B,INLE6       )
+ XPO= 0.000000E+00; YPO= 7.238702E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,INLE7       )
+ XPO= 0.000000E+00; YPO= 8.445152E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,INLE8       )
+ XPO= 0.000000E+00; YPO= 9.651602E+02; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,INLE9       )
+ XPO= 0.000000E+00; YPO= 1.085805E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,INLE10      )
+ XPO= 0.000000E+00; YPO= 1.206450E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206375E+02; ZSI= 5.799900E+00
+ RSET(B,INLE11      )
+ XPO= 0.000000E+00; YPO= 1.327088E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206532E+02; ZSI= 5.799900E+00
+ RSET(B,INLE12      )
+ XPO= 0.000000E+00; YPO= 1.447741E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206420E+02; ZSI= 5.799900E+00
+ RSET(B,INLE13      )
+ XPO= 0.000000E+00; YPO= 1.568383E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206488E+02; ZSI= 5.799900E+00
+ RSET(B,INLE14      )
+ XPO= 0.000000E+00; YPO= 1.689032E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206454E+02; ZSI= 5.799900E+00
+ RSET(B,INLE15      )
+ XPO= 0.000000E+00; YPO= 1.809677E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206395E+02; ZSI= 5.799900E+00
+ RSET(B,INLE16      )
+ XPO= 0.000000E+00; YPO= 1.930317E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206481E+02; ZSI= 5.799900E+00
+ RSET(B,INLE17      )
+ XPO= 0.000000E+00; YPO= 2.050965E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206519E+02; ZSI= 5.799900E+00
+ RSET(B,INLE18      )
+ XPO= 0.000000E+00; YPO= 2.171616E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206401E+02; ZSI= 5.799900E+00
+ RSET(B,INLE19      )
+ XPO= 0.000000E+00; YPO= 2.292257E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206482E+02; ZSI= 5.799900E+00
+ RSET(B,INLE20      )
+ XPO= 0.000000E+00; YPO= 2.412905E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206423E+02; ZSI= 5.799900E+00
+ RSET(B,INLE21      )
+ XPO= 0.000000E+00; YPO= 2.533547E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206440E+02; ZSI= 5.799900E+00
+ RSET(B,INLE22      )
+ XPO= 0.000000E+00; YPO= 2.654191E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206367E+02; ZSI= 5.799900E+00
+ RSET(B,INLE23      )
+ XPO= 0.000000E+00; YPO= 2.774828E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206519E+02; ZSI= 5.799900E+00
+ RSET(B,INLE24      )
+ XPO= 0.000000E+00; YPO= 2.895480E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206418E+02; ZSI= 5.799900E+00
+ RSET(B,INLE25      )
+ XPO= 0.000000E+00; YPO= 3.016122E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206504E+02; ZSI= 5.799900E+00
+ RSET(B,INLE26      )
+ XPO= 0.000000E+00; YPO= 3.136772E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206475E+02; ZSI= 5.799900E+00
+ RSET(B,INLE27      )
+ XPO= 0.000000E+00; YPO= 3.257419E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206377E+02; ZSI= 5.799900E+00
+ RSET(B,INLE28      )
+ XPO= 0.000000E+00; YPO= 3.378057E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206528E+02; ZSI= 5.799900E+00
+ RSET(B,INLE29      )
+ XPO= 0.000000E+00; YPO= 3.498710E+03; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 1.206411E+02; ZSI= 5.799900E+00
+ RSET(B,INLE30      )
+ XPO= 7.155000E+03; YPO= 0.000000E+00; ZPO= 0.000000E+00
+ XSI= 0.000000E+00; YSI= 3.619351E+03; ZSI= 5.799900E+00
+ RSET(B,OUTLET      )
+ XPO= 9.292208E+01; YPO= 9.651602E+02; ZPO= 0.000000E+00
+ XSI= 9.292208E+01; YSI= 1.206450E+02; ZSI= 5.799900E+00
+ RSET(B,B39         )
+ XPO= 0.000000E+00; YPO= 0.000000E+00; ZPO= 0.000000E+00
+ XSI= 7.155000E+03; YSI= 3.619351E+03; ZSI= 0.000000E+00
+ RSET(B,B40         )
+ ************************************************************
+  Group 6. Body-Fitted coordinates
+ BFC=T
+ READCO(*../d_earth/d_opt/d_chem/inplib/spill.xyz)
+    **********
+ NONORT = T
+ ************************************************************
+  Group 7. Variables: STOREd,SOLVEd,NAMEd
+    * Non-default variable names
+ NAME(132)=DWDY ;NAME(133)=DWDX
+ NAME(134)=DVDY ;NAME(135)=DVDX
+ NAME(136)=DUDY ;NAME(137)=DUDX
+ NAME(138)=GEN1 ;NAME(139)=DM
+ NAME(140)=EM ;NAME(141)=CM
+ NAME(142)=FBP ;NAME(143)=XWP
+ NAME(144)=EPKE ;NAME(145)=BM
+ NAME(146)=VPOR ;NAME(147)=AM
+ NAME(148)=WCRT ;NAME(149)=VCRT
+ NAME(150) =UCRT
+    * Solved variables list
+ SOLVE(P1,U1,V1,C1,EM,CM,BM,AM)
+    * Stored variables list
+ STORE(UCRT,VCRT,WCRT,VPOR,EPKE,XWP,FBP,DM)
+ STORE(GEN1,DUDX,DUDY,DVDX,DVDY,DWDX,DWDY)
+    * Additional solver options
+ SOLUTN(P1,Y,Y,Y,N,N,N)
+ SOLUTN(U1,Y,Y,Y,Y,N,N)
+ SOLUTN(V1,Y,Y,Y,Y,N,N)
+ SOLUTN(C1,Y,Y,Y,N,N,Y)
+ SOLUTN(EM,Y,Y,Y,N,N,Y)
+ SOLUTN(CM,Y,Y,Y,N,N,Y)
+ SOLUTN(BM,Y,Y,Y,N,N,Y)
+ SOLUTN(AM,Y,Y,Y,N,N,Y)
+ TURMOD(KECHEN)
+ 
+ GCV = T
+ ************************************************************
+  Group 8. Terms & Devices
+ ISOLX = 1 ;ISOLY = -1 ;ISOLZ = -1
+ ************************************************************
+  Group 9. Properties
+ PRESS0 =1.0E+05
+    * Domain material index is  67 signifying:
+    * WATER at 20. deg C
+ SETPRPS(1, 67)
+ DVO1DT =1.18E-04
+ PRT(KE)=0.75 ;PRT(EP)=1.15
+ ************************************************************
+  Group 10.Inter-Phase Transfer Processes
+ ************************************************************
+  Group 11.Initialise Var/Porosity Fields
+ FIINIT(U1)=1. ;FIINIT(FBP)=1.
+ FIINIT(VPOR)=1.
+   No PATCHes used for this Group
+ 
+ 
+ INIADD = F
+ ************************************************************
+  Group 12. Convection and diffusion adjustments
+   No PATCHes used for this Group
+ ************************************************************
+  Group 13. Boundary & Special Sources
+   No PATCHes used for this Group
+ 
+ EGWF = T
+ ************************************************************
+  Echo save-block settings for Group 13
+  save13begin
+PATCH(CHEM,VOLUME,1,NX,1,NY,1,NZ,1,LSTEP)
+(SOURCE OF AM AT CHEM IS COVAL(2.5*BM,0.0))
+(SOURCE OF BM AT CHEM IS COVAL(5.55*AM,0.0))
+(SOURCE OF CM AT CHEM IS COVAL(0.215,24.9*AM*BM))
+(SOURCE OF EM AT CHEM IS COVAL(FIXFLU,0.18*CM))
+(STORED OF DM IS MAX(0.0,(1.-AM-BM-CM-EM-C1)))
+  save13end
+ ************************************************************
+  Group 14. Downstream Pressure For PARAB
+ ************************************************************
+  Group 15. Terminate Sweeps
+ LSWEEP = 300
+ RESFAC =1.0E-06
+ ************************************************************
+  Group 16. Terminate Iterations
+ ************************************************************
+  Group 17. Relaxation
+ RELAX(P1 ,LINRLX,1. )
+ RELAX(U1 ,FALSDT,1000. )
+ RELAX(V1 ,FALSDT,1000. )
+ RELAX(KE ,LINRLX,0.5 )
+ RELAX(EP ,LINRLX,0.5 )
+ RELAX(C1 ,FALSDT,1. )
+ RELAX(EM ,FALSDT,1000. )
+ RELAX(CM ,FALSDT,1000. )
+ RELAX(BM ,FALSDT,1000. )
+ RELAX(AM ,FALSDT,1000. )
+ KELIN = 3
+ ************************************************************
+  Group 18. Limits
+ VARMAX(DM)=1. ;VARMIN(DM)=0.
+ VARMAX(EM)=1. ;VARMIN(EM)=0.
+ VARMAX(CM)=1. ;VARMIN(CM)=0.
+ VARMAX(BM)=1. ;VARMIN(BM)=0.
+ VARMAX(AM)=1. ;VARMIN(AM)=0.
+ ************************************************************
+  Group 19. EARTH Calls To GROUND Station
+ GENK = T
+ PARSOL = F
+ IENUTA = 2
+ ISG62 = 1
+ RSG1 =0.75
+ SPEDAT(SET,GXMONI,PLOTALL,L,T)
+ ************************************************************
+  Group 20. Preliminary Printout
+ ************************************************************
+  Group 21. Print-out of Variables
+ INIFLD = T
+ ************************************************************
+  Group 22. Monitor Print-Out
+ IXMON = 76 ;IYMON = 3 ;IZMON = 1
+ NPRMON = 100000
+ NPRMNT = 1
+ TSTSWP = -1
+ ************************************************************
+  Group 23.Field Print-Out & Plot Control
+ NPRINT = 100000
+ NTPRIN = 100000 ;ISTPRF = 1 ;ISTPRL = 100000
+ ISWPRF = 1 ;ISWPRL = 100000
+ ITABL = 0
+   No PATCHes used for this Group
+ ************************************************************
+  Group 24. Dumps For Restarts
+ IDISPA = 1 ;IDISPB = 0 ;IDISPC = 0
+ CSG1    ='A'
+ 
+ GVIEW(P,0.054475,-0.013849,0.99842)
+ GVIEW(UP,-0.067963,0.997533,0.017545)
+ GVIEW(WINDOW,1330,1147)
+ GVIEW(VDIS,2699.475098)
+ GVIEW(CENTRE,7682.5,1974.675537,61.949951)
+ 
+> DOM,    SIZE,        7.700000E+01, 3.000000E+01, 1.000000E+00
+> DOM,    MONIT,       7.600000E+01, 3.000000E+00, 1.000000E+00
+> DOM,    SCALE,       1.000000E+00, 1.000000E+00, 1.000000E+00
+> DOM,    INCREMENT,   1.000000E-02, 1.000000E-02, 1.000000E-02
+  > GRID,   RSET_X_1,      1, 1.000000E+00
+  > GRID,   RSET_X_2,      1, 1.000000E+00
+  > GRID,   RSET_X_3,      3, 1.000000E+00
+  > GRID,   RSET_X_4,      2, 1.000000E+00
+  > GRID,   RSET_X_5,      1, 1.000000E+00
+  > GRID,   RSET_X_6,     13, 1.000000E+00
+  > GRID,   RSET_X_7,      4, 1.000000E+00
+  > GRID,   RSET_X_8,      7, 1.000000E+00
+  > GRID,   RSET_X_9,      1, 1.000000E+00
+  > GRID,   RSET_X_10,     18, 1.000000E+00
+  > GRID,   RSET_X_11,      6, 1.000000E+00
+  > GRID,   RSET_X_12,      5, 1.000000E+00
+  > GRID,   RSET_X_13,      3, 1.000000E+00
+  > GRID,   RSET_X_14,     10, 1.000000E+00
+  > GRID,   RSET_X_15,      2, 1.000000E+00
+  > GRID,   RSET_Y_1,      1, 1.000000E+00
+  > GRID,   RSET_Y_2,      1, 1.000000E+00
+  > GRID,   RSET_Y_3,      1, 1.000000E+00
+  > GRID,   RSET_Y_4,      1, 1.000000E+00
+  > GRID,   RSET_Y_5,      1, 1.000000E+00
+  > GRID,   RSET_Y_6,      1, 1.000000E+00
+  > GRID,   RSET_Y_7,      1, 1.000000E+00
+  > GRID,   RSET_Y_8,      1, 1.000000E+00
+  > GRID,   RSET_Y_9,      1, 1.000000E+00
+  > GRID,   RSET_Y_10,      1, 1.000000E+00
+  > GRID,   RSET_Y_11,      1, 1.000000E+00
+  > GRID,   RSET_Y_12,      1, 1.000000E+00
+  > GRID,   RSET_Y_13,      1, 1.000000E+00
+  > GRID,   RSET_Y_14,      1, 1.000000E+00
+  > GRID,   RSET_Y_15,      1, 1.000000E+00
+  > GRID,   RSET_Y_16,      1, 1.000000E+00
+  > GRID,   RSET_Y_17,      1, 1.000000E+00
+  > GRID,   RSET_Y_18,      1, 1.000000E+00
+  > GRID,   RSET_Y_19,      1, 1.000000E+00
+  > GRID,   RSET_Y_20,      1, 1.000000E+00
+  > GRID,   RSET_Y_21,      1, 1.000000E+00
+  > GRID,   RSET_Y_22,      1, 1.000000E+00
+  > GRID,   RSET_Y_23,      1, 1.000000E+00
+  > GRID,   RSET_Y_24,      1, 1.000000E+00
+  > GRID,   RSET_Y_25,      1, 1.000000E+00
+  > GRID,   RSET_Y_26,      1, 1.000000E+00
+  > GRID,   RSET_Y_27,      1, 1.000000E+00
+  > GRID,   RSET_Y_28,      1, 1.000000E+00
+  > GRID,   RSET_Y_29,      1, 1.000000E+00
+  > GRID,   RSET_Y_30,      1, 1.000000E+00
+  > GRID,   RSET_Z_1,      1, 1.000000E+00
+ 
+> OBJ,    NAME,        CMP0
+> OBJ,    POSITION,    5.000000E+00, 2.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        2.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    CMP0
+> OBJ,    TYPE,        BLOCKAGE
+> OBJ,    MATERIAL,    199,Solid allowing fluid-slip at walls
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+ 
+> OBJ,    NAME,        CMP1
+> OBJ,    POSITION,    8.000000E+00, 9.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        1.700000E+01, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    CMP1
+> OBJ,    TYPE,        BLOCKAGE
+> OBJ,    MATERIAL,    199,Solid allowing fluid-slip at walls
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+ 
+> OBJ,    NAME,        CMP2
+> OBJ,    POSITION,    2.100000E+01, 6.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        1.100000E+01, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    CMP2
+> OBJ,    TYPE,        BLOCKAGE
+> OBJ,    MATERIAL,    199,Solid allowing fluid-slip at walls
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+ 
+> OBJ,    NAME,        CMP3
+> OBJ,    POSITION,    3.300000E+01, 5.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        2.400000E+01, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    CMP3
+> OBJ,    TYPE,        BLOCKAGE
+> OBJ,    MATERIAL,    199,Solid allowing fluid-slip at walls
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+ 
+> OBJ,    NAME,        CMP4
+> OBJ,    POSITION,    5.100000E+01, 1.000000E+01, 0.000000E+00
+> OBJ,    SIZE,        1.400000E+01, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    CMP4
+> OBJ,    TYPE,        BLOCKAGE
+> OBJ,    MATERIAL,    199,Solid allowing fluid-slip at walls
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+ 
+> OBJ,    NAME,        CMP5
+> OBJ,    POSITION,    6.200000E+01, 6.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        1.300000E+01, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    CMP5
+> OBJ,    TYPE,        BLOCKAGE
+> OBJ,    MATERIAL,    199,Solid allowing fluid-slip at walls
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+ 
+> OBJ,    NAME,        INLE1
+> OBJ,    POSITION,    0.000000E+00, 0.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE1
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.04 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE2
+> OBJ,    POSITION,    0.000000E+00, 1.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE2
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.16 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE3
+> OBJ,    POSITION,    0.000000E+00, 2.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE3
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.24 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE4
+> OBJ,    POSITION,    0.000000E+00, 3.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE4
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.34 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE5
+> OBJ,    POSITION,    0.000000E+00, 4.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE5
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.42 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE6
+> OBJ,    POSITION,    0.000000E+00, 5.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE6
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.5 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE7
+> OBJ,    POSITION,    0.000000E+00, 6.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE7
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.58 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE8
+> OBJ,    POSITION,    0.000000E+00, 7.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE8
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.65 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE9
+> OBJ,    POSITION,    0.000000E+00, 8.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE9
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.71 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE10
+> OBJ,    POSITION,    0.000000E+00, 9.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE10
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.78 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE11
+> OBJ,    POSITION,    0.000000E+00, 1.000000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE11
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.82 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE12
+> OBJ,    POSITION,    0.000000E+00, 1.100000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE12
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.84 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE13
+> OBJ,    POSITION,    0.000000E+00, 1.200000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE13
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.85 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE14
+> OBJ,    POSITION,    0.000000E+00, 1.300000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE14
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.855 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE15
+> OBJ,    POSITION,    0.000000E+00, 1.400000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE15
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.85 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE16
+> OBJ,    POSITION,    0.000000E+00, 1.500000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE16
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.83 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE17
+> OBJ,    POSITION,    0.000000E+00, 1.600000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE17
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.81 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE18
+> OBJ,    POSITION,    0.000000E+00, 1.700000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE18
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.79 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE19
+> OBJ,    POSITION,    0.000000E+00, 1.800000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE19
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.76 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE20
+> OBJ,    POSITION,    0.000000E+00, 1.900000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE20
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.73 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE21
+> OBJ,    POSITION,    0.000000E+00, 2.000000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE21
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.7 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE22
+> OBJ,    POSITION,    0.000000E+00, 2.100000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE22
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.67 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE23
+> OBJ,    POSITION,    0.000000E+00, 2.200000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE23
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.64 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE24
+> OBJ,    POSITION,    0.000000E+00, 2.300000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE24
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.62 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE25
+> OBJ,    POSITION,    0.000000E+00, 2.400000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE25
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.57 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE26
+> OBJ,    POSITION,    0.000000E+00, 2.500000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE26
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     999.999878
+> OBJ,    VELOCITY,    0.54 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE27
+> OBJ,    POSITION,    0.000000E+00, 2.600000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE27
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.48 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE28
+> OBJ,    POSITION,    0.000000E+00, 2.700000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE28
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.4 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE29
+> OBJ,    POSITION,    0.000000E+00, 2.800000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE29
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     999.999878
+> OBJ,    VELOCITY,    0.3 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        INLE30
+> OBJ,    POSITION,    0.000000E+00, 2.900000E+01, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    INLE30
+> OBJ,    TYPE,        INLET
+> OBJ,    DENSITY,     1000.
+> OBJ,    VELOCITY,    0.08 ,0. ,0.
+> OBJ,    INLET_C1,    1.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURB-INTENS, 5.
+ 
+> OBJ,    NAME,        OUTLET
+> OBJ,    POSITION,    7.700000E+01, 0.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        0.000000E+00, 3.000000E+01, 1.000000E+00
+> OBJ,    GEOMETRY,    OUTLET
+> OBJ,    TYPE,        OUTLET
+> OBJ,    PRESSURE,    0.
+> OBJ,    COEFFICIENT, 1000.
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    TURBULENCE,  SAME , SAME
+ 
+> OBJ,    NAME,        B39
+> OBJ,    POSITION,    1.000000E+00, 8.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        1.000000E+00, 1.000000E+00, 1.000000E+00
+> OBJ,    GEOMETRY,    B39
+> OBJ,    TYPE,        BLOCKAGE
+> OBJ,    MATERIAL,    DOMAIN
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+> OBJ,    INI_PRESS,   0.
+> OBJ,    FIX_VAL_C1,  FIXVAL ,0.99
+> OBJ,    FIX_VAL_EM,  FIXVAL ,0.
+> OBJ,    FIX_VAL_CM,  FIXVAL ,0.
+> OBJ,    FIX_VAL_BM,  FIXVAL ,7.5E-03
+> OBJ,    FIX_VAL_AM,  FIXVAL ,2.5E-03
+> OBJ,    INI_C1,      0.
+ 
+> OBJ,    NAME,        B40
+> OBJ,    POSITION,    0.000000E+00, 0.000000E+00, 0.000000E+00
+> OBJ,    SIZE,        7.700000E+01, 3.000000E+01, 0.000000E+00
+> OBJ,    GEOMETRY,    B40
+> OBJ,    VISIBLE,     NO
+> OBJ,    TYPE,        PLATE
+> OBJ,    TIME_LIMITS, ALWAYS_ACTIVE
+STOP
+  </strong></pre></body></html>
